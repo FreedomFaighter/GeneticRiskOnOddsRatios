@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #python geneticPooledOdds.py {ID} {File Name} {Age} {Gender} {Excel spreadsheet}
-import test
+import secantMethod
 import pandas as pd
 import numpy as np
 #import random
@@ -99,7 +99,7 @@ def PooledOddsForDisease(disease, PopulationProbability):
 #    print(disease)
     subSNPdf = SNPdf[SNPdf['Disease'] == disease]
     uniq = subSNPdf['rsid'].unique()
-    results = test.getGenotypeProbabilities(uniq)
+    results = secantMethod.getGenotypeProbabilities(uniq)
     SNPsPersonHas = list(set(data.keys()) & set(uniq))
     DictionaryOfSNPAndGenotype = {}
     for i in SNPsPersonHas:
@@ -173,7 +173,7 @@ def PooledOddsForDisease(disease, PopulationProbability):
             conditionalPDG_3 = 0
         return [conditionalPDG_1, conditionalPDG_2, conditionalPDG_3]
     SNPDictionary = {}
-    startTime = datetime.now()
+    #startTime = datetime.now()
     for i in SNPsPersonHas:
         def matchString(index, ts):
             return (index == ts) | (index == ts[1] + ts[0])
@@ -204,7 +204,7 @@ def PooledOddsForDisease(disease, PopulationProbability):
         OddsAndPDns['Conditional'] = pd.Series(findConditionalProbabilities(PopulationProbability, OddsAndPDns), index = OddsAndPDns.index)
 
         SNPDictionary[i] = OddsAndPDns
-    print(datetime.now() - startTime)
+    #print(datetime.now() - startTime)
     denom = PopulationProbability / (1-PopulationProbability)
     for i in SNPDictionary.keys():
         product = 1
