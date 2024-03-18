@@ -1,3 +1,9 @@
+$$P\left(D\|G_{i}\right)$$ 
+
+is the probability of disease prevelance on the genotype 
+
+$$G_{i}$$
+
 $$P\left(D\right)=\sum_{n=1}^3 P\left(D\|G_{i}\right)P\left(G_{i}\right)$$
 
 $$OR_{i}=\frac{X_{i}\left(1-X_{1}\right)}{X_{1}\left(1-X_{i}\right)}$$
