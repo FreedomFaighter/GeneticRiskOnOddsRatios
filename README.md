@@ -2,9 +2,7 @@ $$P\left(D\right)=\sum_{n=1}^3 P\left(D\|G_{i}\right)P\left(G_{i}\right)$$
 
 $$OR_{i}=\frac{X_{i}\left(1-X_{1}\right)}{X_{1}\left(1-X_{i}\right)}$$
 
-$$X_{i}=\frac{X_{i}OR_{i}}{1-X_{1}+X_{1}OR_{i}}$$
-
-$$P\left(D\right)=X_{1}P\left(G_{1}\right)+\frac{X_{2}OR_{2}}{1-X_{1}+X_{1}OR_{2}}P\left(G_{2}\right)+\frac{X_{3}OR_{3}}{1-X_{1}+X_{1}OR_{3}}P\left(G_{3}\right)$$
+$$P\left(D\right)=X_{1}P\left(G_{1}\right)+\frac{X_{1}OR_{2}}{1-X_{1}+X_{1}OR_{2}}P\left(G_{2}\right)+\frac{X_{1}OR_{3}}{1-X_{1}+X_{1}OR_{3}}P\left(G_{3}\right)$$
 
 Pooled-Odds-Ratio
 =================
