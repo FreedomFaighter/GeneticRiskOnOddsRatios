@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #python geneticPooledOdds.py {ID} {File Name} {Age} {Gender} {Excel spreadsheet}
-import test
+import secantMethod
 import pandas as pd
 import numpy as np
 #import random
@@ -99,7 +99,7 @@ def PooledOddsForDisease(disease, PopulationProbability):
 #    print(disease)
     subSNPdf = SNPdf[SNPdf['Disease'] == disease]
     uniq = subSNPdf['rsid'].unique()
-    results = test.getGenotypeProbabilities(uniq)
+    results = secantMethod.getGenotypeProbabilities(uniq)
     SNPsPersonHas = list(set(data.keys()) & set(uniq))
     DictionaryOfSNPAndGenotype = {}
     for i in SNPsPersonHas:
