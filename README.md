@@ -10,6 +10,8 @@ $$OR_{i}=\frac{X_{i}\left(1-X_{1}\right)}{X_{1}\left(1-X_{i}\right)}$$
 
 $$P\left(D\right)=X_{1}P\left(G_{1}\right)+\frac{X_{1}OR_{2}}{1-X_{1}+X_{1}OR_{2}}P\left(G_{2}\right)+\frac{X_{1}OR_{3}}{1-X_{1}+X_{1}OR_{3}}P\left(G_{3}\right)$$
 
+Solvable on the $\mathbb{R}$ except when $1-X_{1}+X_{1}OR_{2}\neq0$ and $1-X_{1}+X_{1}OR_{3}\neq0$
+
 Pooled-Odds-Ratio
 =================
 
