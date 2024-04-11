@@ -7,6 +7,7 @@ import numpy as np
 from datetime import datetime
 import sys
 import csv
+from numerical.one_variable import secant
 #excel sheet with info on first tab/sheet
 excelSheetName = str(sys.argv[5])
 fileName = str(sys.argv[2])
@@ -110,19 +111,6 @@ def PooledOddsForDisease(disease, PopulationProbability):
     def findConditionalProbabilities(popProb, OddsAndPGn):
         if disease == "Cognitive_Function":
             print(OddsAndPGn)
-        def secant(f, p0, p1, TOL = 0.001, N = 2000):
-            i = 2
-            q0 = f(p0)
-            q1 = f(p1)
-            while i <= N:
-                p = p1 - q1 * (p1 - p0) / (q1 - q0)
-                if abs(p - p1) < TOL:
-                    return p
-                i += 1
-                p0 = p1
-                q0 = q1
-                p1 = p
-                q1 = f(p)
         def findp0p1(d):
             IsNegative = None
             WasNegative = None
@@ -153,8 +141,7 @@ def PooledOddsForDisease(disease, PopulationProbability):
                     WasNegative = False
             return p0, p1
         def computePDG_1(x):
-            result = -popProb
-            result += x * OddsAndPGn['PGn'].iloc[0]
+            result = x * OddsAndPGn['PGn'].iloc[0] - popProb
             for i in range(1,len(OddsAndPGn)):
                 result += OddsAndPGn['OR'].iloc[i] * x / (OddsAndPGn['OR'].iloc[i] * x - x + 1) * OddsAndPGn['PGn'].iloc[i]
             return result
@@ -163,7 +150,7 @@ def PooledOddsForDisease(disease, PopulationProbability):
             p_0 = df.index[i]
             df["Initial Candidates"].iloc[i] = computePDG_1(p_0)
         p0, p1 = findp0p1(df)
-        conditionalPDG_1 = secant(computePDG_1, p0, p1)
+        conditionalPDG_1 = secant(computePDG_1, p0, p1, 0.0001, 2000)
         if conditionalPDG_1 > 0:
             conditionalPDG_2 = OddsAndPGn['OR'].iloc[1] * conditionalPDG_1 / (OddsAndPGn['OR'].iloc[1] * conditionalPDG_1 - conditionalPDG_1 + 1)
             conditionalPDG_3 = OddsAndPGn['OR'].iloc[2] * conditionalPDG_1 / (OddsAndPGn['OR'].iloc[2] * conditionalPDG_1 - conditionalPDG_1 + 1)
