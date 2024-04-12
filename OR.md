@@ -13,14 +13,14 @@ genotype:
 
 $$P(D) = \ P\left( D \middle| G_{1} \right)P\left( G_{1} \right) + P\left( D \middle| G_{2} \right)P\left( G_{2} \right) + P\left( D \middle| G_{3} \right)P(G_{3})$$
 
-$${OR}_{2} = \ \frac{\frac{P(D|G_{2})}{(1 - P(D|G_{2}))}}{\frac{P(D|G_{1})}{(1 - P(D|G_{1}))}}$$
+$$OR_{2} = \frac{\frac{P(D|G_{2})}{(1 - P(D|G_{2}))}}{\frac{P(D|G_{1})}{(1 - P(D|G_{1}))}}$$
 
-$${OR}_{3} = \ \frac{\frac{P(D|G_{3})}{(1 - P(D|G_{3}))}}{\frac{P(D|G_{1})}{(1 - P(D|G_{1}))}}$$
+$$OR_{3} = \frac{\frac{P(D|G_{3})}{(1 - P(D|G_{3}))}}{\frac{P(D|G_{1})}{(1 - P(D|G_{1}))}}$$
 
-Where, D stands for disease, P(D) is disease prevalence, G~1~, G~2~,
-G~3~ are the three SNP genotypes ordered in such a way that G~1~ is a
-low-risk homozygote, and OR~1~, OR~2~, OR~3~ are corresponding genotype
-odds ratio where OR~1~ = 1 by definition. All of these quantities are
+Where, D stands for disease, P(D) is disease prevalence, $G_{1}$, $G_{2}$,
+$G_{3}$ are the three SNP genotypes ordered in such a way that G~1~ is a
+low-risk homozygote, and $OR_{1}$, $OR_{2}$, $OR_{3}$ are corresponding genotype
+odds ratio where $OR_{1} = 1$ by definition. All of these quantities are
 known to us, so we can plug them in the above set of three equations to
 obtain
 $P\left( D \middle| G_{1} \right),\ P\left( D \middle| G_{2} \right),\ P\left( D \middle| G_{3} \right)$,
@@ -29,11 +29,11 @@ that is, the probability of the disease given the three genotypes.
 To obtain adjusted odds ratios, we use the computed P(D\|G) using the
 following equations:
 
-$${adjusted\ OR}_{1} = \ \frac{\frac{P(D|G_{1})}{(1 - P(D|G_{1}))}}{\frac{P(D)}{(1 - P(D))}}$$
+$$adjusted\ OR_{1} = \frac{\frac{P(D|G_{1})}{(1 - P(D|G_{1}))}}{\frac{P(D)}{(1 - P(D))}}$$
 
-$${adjusted\ OR}_{2} = \ \frac{\frac{P(D|G_{2})}{(1 - P(D|G_{2}))}}{\frac{P(D)}{(1 - P(D))}}$$
+$$adjusted\ OR_{2} = \frac{\frac{P(D|G_{2})}{(1 - P(D|G_{2}))}}{\frac{P(D)}{(1 - P(D))}}$$
 
-$${adjusted\ OR}_{3} = \ \frac{\frac{P(D|G_{3})}{(1 - P(D|G_{3}))}}{\frac{P(D)}{(1 - P(D))}}$$
+$$adjusted\ OR_{3} = \frac{\frac{P(D|G_{3})}{(1 - P(D|G_{3}))}}{\frac{P(D)}{(1 - P(D))}}$$
 
 As you can see, the odds ratios are adjusted in a way to be calculated
 relative to the average risk of the disease in the population.
