@@ -14,7 +14,7 @@ Or, generally speaking
 
 $$P\left(D\right)=\sum_{o=1}^{\inf}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}$$
 
-$$\sum_{o=1}^{\inf}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}-P\left(D\right)=0$$
+$$\sum_{o=1}^{∞}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}-P\left(D\right)=0$$
 
 Pooled-Odds-Ratio
 =================
