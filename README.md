@@ -8,7 +8,11 @@ $$P\left(D\right)=\sum_{n=1}^3 P\left(D\|G_{i}\right)P\left(G_{i}\right)$$
 
 $$OR_{i}=\frac{X_{i}\left(1-X_{1}\right)}{X_{1}\left(1-X_{i}\right)}$$
 
-$$P\left(D\right)=XP\left(G_{1}\right)+\frac{XOR_{2}}{1-X+XOR_{2}}P\left(G_{2}\right)+\frac{XOR_{3}}{1-X+XOR_{3}}P\left(G_{3}\right)$$
+$$=XP\left(G_{1}\right)+\frac{XOR_{2}}{1-X+XOR_{2}}P\left(G_{2}\right)+\frac{XOR_{3}}{1-X+XOR_{3}}P\left(G_{3}\right)$$
+
+Or, generally speaking
+
+$$P\left(D\right)=\sum_{o=1}^{\inf}{\frac{XOR_{i}}{1-X+XOR_{i}}P\left(G_{i}\right)}$$
 
 Pooled-Odds-Ratio
 =================
