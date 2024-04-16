@@ -1,8 +1,8 @@
 $$P\left(D\|G_{i}\right)$$ 
 
-is the probability of disease prevelance on the genotype 
+is the probability of disease prevelance on the genotype $G_{i}$
 
-$$G_{i}$$
+$OR_{i}$ is the odds ratio generated from a logistic regression on variable $i$
 
 $$P\left(D\right)=\sum_{n=1}^3 P\left(D\|G_{i}\right)P\left(G_{i}\right)$$
 
