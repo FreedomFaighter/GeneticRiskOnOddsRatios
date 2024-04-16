@@ -33,7 +33,7 @@ source venv/bin/activate
 
 Install requirements from the file:
 ```
-pip linstall -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Exit:
