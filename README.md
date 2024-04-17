@@ -4,7 +4,11 @@ is the probability of disease prevelance on the genotype $G_{i}$
 
 $OR_{i}$ is the odds ratio generated from a logistic regression on variable $i$
 
+$0\leq P\left(D\right)\leq1$
+
 $$P\left(D\right)=\sum_{n=1}^3 P\left(D\|G_{i}\right)P\left(G_{i}\right)$$
+
+$0 \lt OR_{i} \lt ∞$
 
 $$OR_{i}=\frac{X_{i}\left(1-X_{1}\right)}{X_{1}\left(1-X_{i}\right)}$$
 
