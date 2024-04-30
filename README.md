@@ -10,11 +10,19 @@ $$OR_{i}=\frac{X_{i}\left(1-X_{1}\right)}{X_{1}\left(1-X_{i}\right)}$$
 
 $$P\left(D\right)=XP\left(G_{1}\right)+\frac{XOR_{2}}{1-X+XOR_{2}}P\left(G_{2}\right)+\frac{XOR_{3}}{1-X+XOR_{3}}P\left(G_{3}\right)$$
 
-Or, generally speaking
+Or, generally describing
 
 $$P\left(D\right)=\sum_{o=1}^{\inf}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}$$
 
 $$\sum_{o=1}^{∞}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}-P\left(D\right)=0$$
+
+A stochastic model might be describe with a distribution of each 
+
+$$OR_{o} \in \left(0\lt i\lt ∞ \right)$$
+
+positive only style of distribution constrainted by the definition of odds ratios
+
+$P\left(D\right)\in B\left(\alpha,\beta\right)$ in the style of beta distributions
 
 Pooled-Odds-Ratio
 =================
