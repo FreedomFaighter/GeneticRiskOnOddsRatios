@@ -16,6 +16,8 @@ $$P\left(D\right)=\sum_{o=1}^{\inf}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\righ
 
 $$\sum_{o=1}^{∞}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}-P\left(D\right)=0$$
 
+$$\sum_{o=1}^{∞}{\frac{XOR_{o}}{1-X+XOR_{o}}P\left(G_{o}\right)}=P\left(D\right)$$
+
 A stochastic model might be describe with a distribution of each 
 
 $$OR_{o} \in \left(0\lt i\lt ∞ \right)$$
