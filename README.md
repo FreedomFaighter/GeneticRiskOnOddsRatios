@@ -1,3 +1,7 @@
+October 2015 work with Vitagene is the basis for this solution, which, at the time was based on genetics at the allelle level from consumer DNA testing from Ancestry and 23andMe and would only include a single DNA pair in the probability analysis
+
+This extents to actually formulating an open form of the Logistic regression equation solvable by a root seeking algorith as previously used in the third degree form
+
 $$P\left(D\|G_{i}\right)$$ 
 
 is the probability of disease prevelance on the genotype 
