@@ -1,6 +1,6 @@
 October 2015 work with Vitagene is the basis for this solution, which, at the time was based on genetics at the allelle level from consumer DNA testing from Ancestry and 23andMe and would only include a single DNA pair in the probability analysis
 
-This extents to actually formulating an open form of the Logistic regression equation solvable by a root seeking algorith as previously used in the third degree form
+This extents to actually formulating an open form of the Logistic regression equation solvable by a root seeking algorithm as previously used in the third degree form
 
 $$P\left(D\|G_{i}\right)$$ 
 
@@ -24,11 +24,13 @@ $$\sum_{o=1}^{∞}{\frac{X\iota_{o}}{1-X+X\iota_{o}}P\left(G_{o}\right)}=P\left(
 
 A stochastic model might be describe with a distribution of each 
 
-$$\iota_{o} \in \left(0\lt i\lt ∞ \right)$$
+$$\iota_{o} \in \left(0\lt \iota\lt ∞ \right)$$
 
 positive only style of distribution constrainted by the definition of odds ratios
 
 $P\left(D\right)\in B\left(\alpha,\beta\right)$ in the style of beta distributions
+
+$$1-\sum_{o=1}^{∞}{\frac{X\iota_{o}}{1-X+X\iota_{o}}P\left(G_{o}\right)}=\frac{X\iota_{\omega}}{1-X+X\iota_{\omega}}P\left(G_{\omega}\right)$$
 
 Pooled-Odds-Ratio
 =================
