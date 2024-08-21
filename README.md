@@ -16,7 +16,7 @@ $$P\left(D\right)=XP\left(G_{1}\right)+\frac{X\iota_{2}}{1-X+X\iota_{2}}P\left(G
 
 Or, generally describing
 
-$$P\left(D\right)=\sum_{o=1}^{\inf}{\frac{X\iota_{o}}{1-X+X\iota_{o}}P\left(G_{o}\right)}$$
+$$P\left(D\right)=\sum_{o=1}^{∞}{\frac{X\iota_{o}}{1-X+X\iota_{o}}P\left(G_{o}\right)}$$
 
 $$\sum_{o=1}^{∞}{\frac{X\iota_{o}}{1-X+X\iota_{o}}P\left(G_{o}\right)}-P\left(D\right)=0$$
 
