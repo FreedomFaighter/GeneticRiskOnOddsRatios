@@ -8,3 +8,4 @@ venv
 *.csv
 *.pdf
 *.xlsx
+/.vs

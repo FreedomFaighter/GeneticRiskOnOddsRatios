@@ -115,31 +115,30 @@ def PooledOddsForDisease(disease, PopulationProbability):
             IsNegative = None
             WasNegative = None
             p0 = 0.0 #None
-            p1 = 0.0 #None
+            p1 = 1.0 #None
             for i in range(len(d['Initial Candidates'])):
                 if d['Initial Candidates'].iloc[i] < 0:
                     IsNegative = True
                     if WasNegative == False:
                         p1 = d['Initial Candidates'].index[i]
-                        return p0, p1
-                    if p0 is None:
+                    elif p0 is None:
                         p0 = d['Initial Candidates'].index[i]
-                    if d['Initial Candidates'].iloc[i] > p0:
+                    elif d['Initial Candidates'].iloc[i] > p0:
                         p0 = d['Initial Candidates'].index[i]
                 elif d['Initial Candidates'].iloc[i] > 0:
                     IsNegative = False
                     if WasNegative == True:
                         p1 = d['Initial Candidates'].index[i]
                         return p0, p1
-                    if p0 is None:
+                    elif p0 is None:
                         p0 = d['Initial Candidates'].index[i]
-                    if d['Initial Candidates'].iloc[i] < p0:
+                    elif d['Initial Candidates'].iloc[i] < p0:
                         p0 = d['Initial Candidates'].index[i]
                 if IsNegative == True:
                     WasNegative = True
                 else:
                     WasNegative = False
-            return p0, p1
+            return max(0, p0), min(p1, 1)
         def computePDG_1(x):
             result = x * OddsAndPGn['PGn'].iloc[0] - popProb
             for i in range(1,len(OddsAndPGn)):
