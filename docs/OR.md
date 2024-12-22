@@ -50,3 +50,5 @@ approach, please refer to \[2\].
 2.  <https://23andme.https.internapcdn.net/res/pdf/HIC-SXIYiYqXreldAxO5yA_23-01_Estimating_Genotype_Specific_Incidence.pdf>
 
 3.  <http://courses.washington.edu/b516/lectures_2009/Odds_Ratios.pdf>
+
+[Generalized Form](https://github.com/FreedomFaighter/MathLibrary/blob/master/Statistics/Logistic/README.md)
